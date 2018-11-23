@@ -18,13 +18,11 @@ const TrackList = () => {
       if (error) return `Error! ${error.message}`;
 
       return (
-        <select name="track">
+        <div>
           {data.tracks.map(track => (
-            <option key={track.title} value={track.title}>
-              {track.artist}
-            </option>
+            <p><strong>{track.title}</strong>, {track.artist}</p>
           ))}
-        </select>
+        </div>
       );
     }}
   </Query>
