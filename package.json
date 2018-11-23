@@ -4,7 +4,8 @@
   "description": "Playing with Apollo, just learning.",
   "main": "index.js",
   "scripts": {
-    "start": "node ./server/server.js",
+    "prestart": "npm run build",
+    "start": "concurrently \"node ./server/server.js\" \"npm run serve\"",
     "build": "webpack",
     "serve": "webpack-dev-server --env=dev --inline --no-info --content-base ./public --history-api-fallback",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,6 +31,7 @@
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
     "copy-webpack-plugin": "^4.6.0",
     "express": "^4.16.4",
     "graphql": "^14.0.2",
