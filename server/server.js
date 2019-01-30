@@ -8,12 +8,12 @@ const { makeExecutableSchema } = require('graphql-tools');
 
 const tracks = [
   {
-    title: 'She thick',
-    artist: 'Yo Momma',
+    title: 'Every Day',
+    artist: 'Eric Prydz',
   },
   {
-    title: 'Scouse Land',
-    artist: 'DC and the Bandits',
+    title: 'Opus',
+    artist: 'Eric Prydz',
   },
 ];
 
