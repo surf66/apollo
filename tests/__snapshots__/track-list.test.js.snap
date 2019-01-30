@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot when tracks provided 1`] = `"<p><strong>Every Day</strong>, Eric Prydz</p>"`;
+
+exports[`should match snapshot when waiting for data 1`] = `"Loading..."`;

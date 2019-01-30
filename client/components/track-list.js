@@ -1,15 +1,6 @@
 import React from 'react';
-import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
-
-const GET_TRACKS = gql`
-  {
-    tracks {
-      title
-      artist
-    }
-  }
-`;
+import { GET_TRACKS } from '../queries/get-tracks';
 
 const TrackList = () => {
   return <Query query={GET_TRACKS}>
@@ -18,11 +9,11 @@ const TrackList = () => {
       if (error) return `Error! ${error.message}`;
 
       return (
-        <div>
-          {data.tracks.map(track => (
-            <p><strong>{track.title}</strong>, {track.artist}</p>
-          ))}
-        </div>
+        <React.Fragment>
+          {data.tracks.map((track, index) => {
+            return <p key={index}><strong>{track.title}</strong>, {track.artist}</p>;
+          })}
+        </React.Fragment>
       );
     }}
   </Query>

@@ -14,3 +14,7 @@ query {
   }
 }
 ```
+
+### Tests
+
+`npm test` will run Jest.
